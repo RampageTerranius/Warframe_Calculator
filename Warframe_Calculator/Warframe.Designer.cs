@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pnl_ = new System.Windows.Forms.Panel();
+            this.pnl_Health = new System.Windows.Forms.Panel();
             this.numUpDown_TrueHealth = new System.Windows.Forms.NumericUpDown();
             this.numUpDown_HealthBonus = new System.Windows.Forms.NumericUpDown();
             this.numUpDown_HealthPercent = new System.Windows.Forms.NumericUpDown();
@@ -42,29 +42,47 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pnl_.SuspendLayout();
+            this.pnl_Armor = new System.Windows.Forms.Panel();
+            this.numUpDown_DamageReduction = new System.Windows.Forms.NumericUpDown();
+            this.lbl_DamageReduction = new System.Windows.Forms.Label();
+            this.numUpDown_TrueArmor = new System.Windows.Forms.NumericUpDown();
+            this.numUpDown_ArmorBonus = new System.Windows.Forms.NumericUpDown();
+            this.numUpDown_ArmorPercent = new System.Windows.Forms.NumericUpDown();
+            this.numUpDown_BaseArmor = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_RawArmorBonus = new System.Windows.Forms.Label();
+            this.lbl_ArmorPercent = new System.Windows.Forms.Label();
+            this.lbl_BaseArmor = new System.Windows.Forms.Label();
+            this.lbl_Armor = new System.Windows.Forms.Label();
+            this.pnl_Health.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_TrueHealth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_HealthBonus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_HealthPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_BaseHealth)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.pnl_Armor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DamageReduction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_TrueArmor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorBonus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorPercent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_BaseArmor)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnl_
+            // pnl_Health
             // 
-            this.pnl_.Controls.Add(this.numUpDown_TrueHealth);
-            this.pnl_.Controls.Add(this.numUpDown_HealthBonus);
-            this.pnl_.Controls.Add(this.numUpDown_HealthPercent);
-            this.pnl_.Controls.Add(this.numUpDown_BaseHealth);
-            this.pnl_.Controls.Add(this.lbl_TrueHealth);
-            this.pnl_.Controls.Add(this.lbl_RawHealthBonus);
-            this.pnl_.Controls.Add(this.lbl_HealthPercent);
-            this.pnl_.Controls.Add(this.lbl_bHealth);
-            this.pnl_.Controls.Add(this.lbl_Health);
-            this.pnl_.Location = new System.Drawing.Point(12, 27);
-            this.pnl_.Name = "pnl_";
-            this.pnl_.Size = new System.Drawing.Size(200, 224);
-            this.pnl_.TabIndex = 0;
+            this.pnl_Health.Controls.Add(this.numUpDown_TrueHealth);
+            this.pnl_Health.Controls.Add(this.numUpDown_HealthBonus);
+            this.pnl_Health.Controls.Add(this.numUpDown_HealthPercent);
+            this.pnl_Health.Controls.Add(this.numUpDown_BaseHealth);
+            this.pnl_Health.Controls.Add(this.lbl_TrueHealth);
+            this.pnl_Health.Controls.Add(this.lbl_RawHealthBonus);
+            this.pnl_Health.Controls.Add(this.lbl_HealthPercent);
+            this.pnl_Health.Controls.Add(this.lbl_bHealth);
+            this.pnl_Health.Controls.Add(this.lbl_Health);
+            this.pnl_Health.Location = new System.Drawing.Point(12, 27);
+            this.pnl_Health.Name = "pnl_Health";
+            this.pnl_Health.Size = new System.Drawing.Size(200, 224);
+            this.pnl_Health.TabIndex = 0;
             // 
             // numUpDown_TrueHealth
             // 
@@ -84,7 +102,7 @@
             this.numUpDown_HealthBonus.Name = "numUpDown_HealthBonus";
             this.numUpDown_HealthBonus.Size = new System.Drawing.Size(194, 23);
             this.numUpDown_HealthBonus.TabIndex = 9;
-            this.numUpDown_HealthBonus.ValueChanged += new System.EventHandler(this.HelathBonus_ValueChanged);
+            this.numUpDown_HealthBonus.ValueChanged += new System.EventHandler(this.HealthBonus_ValueChanged);
             // 
             // numUpDown_HealthPercent
             // 
@@ -174,23 +192,154 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // pnl_Armor
+            // 
+            this.pnl_Armor.Controls.Add(this.numUpDown_DamageReduction);
+            this.pnl_Armor.Controls.Add(this.lbl_DamageReduction);
+            this.pnl_Armor.Controls.Add(this.numUpDown_TrueArmor);
+            this.pnl_Armor.Controls.Add(this.numUpDown_ArmorBonus);
+            this.pnl_Armor.Controls.Add(this.numUpDown_ArmorPercent);
+            this.pnl_Armor.Controls.Add(this.numUpDown_BaseArmor);
+            this.pnl_Armor.Controls.Add(this.label1);
+            this.pnl_Armor.Controls.Add(this.lbl_RawArmorBonus);
+            this.pnl_Armor.Controls.Add(this.lbl_ArmorPercent);
+            this.pnl_Armor.Controls.Add(this.lbl_BaseArmor);
+            this.pnl_Armor.Controls.Add(this.lbl_Armor);
+            this.pnl_Armor.Location = new System.Drawing.Point(218, 27);
+            this.pnl_Armor.Name = "pnl_Armor";
+            this.pnl_Armor.Size = new System.Drawing.Size(200, 269);
+            this.pnl_Armor.TabIndex = 11;
+            // 
+            // numUpDown_DamageReduction
+            // 
+            this.numUpDown_DamageReduction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numUpDown_DamageReduction.Enabled = false;
+            this.numUpDown_DamageReduction.Location = new System.Drawing.Point(3, 231);
+            this.numUpDown_DamageReduction.Name = "numUpDown_DamageReduction";
+            this.numUpDown_DamageReduction.Size = new System.Drawing.Size(194, 23);
+            this.numUpDown_DamageReduction.TabIndex = 12;
+            // 
+            // lbl_DamageReduction
+            // 
+            this.lbl_DamageReduction.AutoSize = true;
+            this.lbl_DamageReduction.Location = new System.Drawing.Point(3, 213);
+            this.lbl_DamageReduction.Name = "lbl_DamageReduction";
+            this.lbl_DamageReduction.Size = new System.Drawing.Size(185, 15);
+            this.lbl_DamageReduction.TabIndex = 11;
+            this.lbl_DamageReduction.Text = "Health damage reduction percent";
+            // 
+            // numUpDown_TrueArmor
+            // 
+            this.numUpDown_TrueArmor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numUpDown_TrueArmor.Enabled = false;
+            this.numUpDown_TrueArmor.Location = new System.Drawing.Point(3, 187);
+            this.numUpDown_TrueArmor.Name = "numUpDown_TrueArmor";
+            this.numUpDown_TrueArmor.Size = new System.Drawing.Size(194, 23);
+            this.numUpDown_TrueArmor.TabIndex = 10;
+            // 
+            // numUpDown_ArmorBonus
+            // 
+            this.numUpDown_ArmorBonus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numUpDown_ArmorBonus.Location = new System.Drawing.Point(3, 143);
+            this.numUpDown_ArmorBonus.Name = "numUpDown_ArmorBonus";
+            this.numUpDown_ArmorBonus.Size = new System.Drawing.Size(194, 23);
+            this.numUpDown_ArmorBonus.TabIndex = 9;
+            this.numUpDown_ArmorBonus.ValueChanged += new System.EventHandler(this.ArmorBonus_ValueChanged);
+            // 
+            // numUpDown_ArmorPercent
+            // 
+            this.numUpDown_ArmorPercent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numUpDown_ArmorPercent.Location = new System.Drawing.Point(3, 99);
+            this.numUpDown_ArmorPercent.Name = "numUpDown_ArmorPercent";
+            this.numUpDown_ArmorPercent.Size = new System.Drawing.Size(194, 23);
+            this.numUpDown_ArmorPercent.TabIndex = 8;
+            this.numUpDown_ArmorPercent.ValueChanged += new System.EventHandler(this.ArmorPercent_ValueChanged);
+            // 
+            // numUpDown_BaseArmor
+            // 
+            this.numUpDown_BaseArmor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numUpDown_BaseArmor.Location = new System.Drawing.Point(3, 55);
+            this.numUpDown_BaseArmor.Name = "numUpDown_BaseArmor";
+            this.numUpDown_BaseArmor.Size = new System.Drawing.Size(194, 23);
+            this.numUpDown_BaseArmor.TabIndex = 2;
+            this.numUpDown_BaseArmor.ValueChanged += new System.EventHandler(this.BaseArmor_ValueChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "True armor";
+            // 
+            // lbl_RawArmorBonus
+            // 
+            this.lbl_RawArmorBonus.AutoSize = true;
+            this.lbl_RawArmorBonus.Location = new System.Drawing.Point(3, 125);
+            this.lbl_RawArmorBonus.Name = "lbl_RawArmorBonus";
+            this.lbl_RawArmorBonus.Size = new System.Drawing.Size(100, 15);
+            this.lbl_RawArmorBonus.TabIndex = 5;
+            this.lbl_RawArmorBonus.Text = "Raw armor bonus";
+            // 
+            // lbl_ArmorPercent
+            // 
+            this.lbl_ArmorPercent.AutoSize = true;
+            this.lbl_ArmorPercent.Location = new System.Drawing.Point(3, 81);
+            this.lbl_ArmorPercent.Name = "lbl_ArmorPercent";
+            this.lbl_ArmorPercent.Size = new System.Drawing.Size(100, 15);
+            this.lbl_ArmorPercent.TabIndex = 4;
+            this.lbl_ArmorPercent.Text = "Armor % increase";
+            // 
+            // lbl_BaseArmor
+            // 
+            this.lbl_BaseArmor.AutoSize = true;
+            this.lbl_BaseArmor.Location = new System.Drawing.Point(3, 37);
+            this.lbl_BaseArmor.Name = "lbl_BaseArmor";
+            this.lbl_BaseArmor.Size = new System.Drawing.Size(66, 15);
+            this.lbl_BaseArmor.TabIndex = 2;
+            this.lbl_BaseArmor.Text = "Base armor";
+            // 
+            // lbl_Armor
+            // 
+            this.lbl_Armor.AutoSize = true;
+            this.lbl_Armor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Armor.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Armor.Name = "lbl_Armor";
+            this.lbl_Armor.Size = new System.Drawing.Size(55, 21);
+            this.lbl_Armor.TabIndex = 0;
+            this.lbl_Armor.Text = "Armor";
+            // 
             // Warframe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 280);
-            this.Controls.Add(this.pnl_);
+            this.ClientSize = new System.Drawing.Size(800, 377);
+            this.Controls.Add(this.pnl_Armor);
+            this.Controls.Add(this.pnl_Health);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Warframe";
             this.Text = "Warframe";
-            this.pnl_.ResumeLayout(false);
-            this.pnl_.PerformLayout();
+            this.pnl_Health.ResumeLayout(false);
+            this.pnl_Health.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_TrueHealth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_HealthBonus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_HealthPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_BaseHealth)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.pnl_Armor.ResumeLayout(false);
+            this.pnl_Armor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DamageReduction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_TrueArmor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorBonus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorPercent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_BaseArmor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,7 +347,7 @@
 
         #endregion
 
-        private Panel pnl_;
+        private Panel pnl_Health;
         private Label lbl_Health;
         private Label lbl_bHealth;
         private MenuStrip menuStrip1;
@@ -211,5 +360,17 @@
         private NumericUpDown numUpDown_HealthBonus;
         private NumericUpDown numUpDown_HealthPercent;
         private NumericUpDown numUpDown_BaseHealth;
+        private Panel pnl_Armor;
+        private NumericUpDown numUpDown_TrueArmor;
+        private NumericUpDown numUpDown_ArmorBonus;
+        private NumericUpDown numUpDown_ArmorPercent;
+        private NumericUpDown numUpDown_BaseArmor;
+        private Label label1;
+        private Label lbl_RawArmorBonus;
+        private Label lbl_ArmorPercent;
+        private Label lbl_BaseArmor;
+        private Label lbl_Armor;
+        private NumericUpDown numUpDown_DamageReduction;
+        private Label lbl_DamageReduction;
     }
 }
