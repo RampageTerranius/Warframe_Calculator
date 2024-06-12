@@ -29,6 +29,8 @@ namespace Warframe_Calculator
             numUpDown_ArmorPercent.Maximum = Decimal.MaxValue;
             numUpDown_TrueArmor.Maximum = Decimal.MaxValue;
 
+            numUpDown_EHP.Maximum = Decimal.MaxValue;
+
             numUpDown_DamageReduction.DecimalPlaces = 1;
         }
 
@@ -50,6 +52,12 @@ namespace Warframe_Calculator
 
             this.Hide();
         }
+        private void CalculateEHP()
+        {
+            // Calculation for EHP is true health / (1 - damage reduction%).
+            decimal eHP = numUpDown_TrueHealth.Value / (1 - (numUpDown_DamageReduction.Value / 100));
+            numUpDown_EHP.Value = eHP;
+        }
 
         private void CalculateHealth()
         {
@@ -59,6 +67,7 @@ namespace Warframe_Calculator
             // Static bonuses includes arcanes (guardian, blessing etc...) and archon shards, these do not add to base and are a flat increase.
             decimal trueHP = numUpDown_BaseHealth.Value * (1 + (numUpDown_HealthPercent.Value / 100)) + numUpDown_HealthBonus.Value;
             numUpDown_TrueHealth.Value = trueHP;
+            CalculateEHP();
         }
         private void CalculateArmor()
         {
@@ -71,6 +80,7 @@ namespace Warframe_Calculator
 
             decimal damageReduction = (trueArmor / (trueArmor + 300)) * 100;
             numUpDown_DamageReduction.Value = damageReduction;
+            CalculateEHP();
         }        
 
         // Recalculate any time values are changed.

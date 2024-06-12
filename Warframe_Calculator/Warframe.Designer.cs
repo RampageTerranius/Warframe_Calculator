@@ -54,6 +54,10 @@
             this.lbl_ArmorPercent = new System.Windows.Forms.Label();
             this.lbl_BaseArmor = new System.Windows.Forms.Label();
             this.lbl_Armor = new System.Windows.Forms.Label();
+            this.pnl_EffectiveStats = new System.Windows.Forms.Panel();
+            this.numUpDown_EHP = new System.Windows.Forms.NumericUpDown();
+            this.lbl_EHP = new System.Windows.Forms.Label();
+            this.lbl_Effective = new System.Windows.Forms.Label();
             this.pnl_Health.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_TrueHealth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_HealthBonus)).BeginInit();
@@ -66,6 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorBonus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_BaseArmor)).BeginInit();
+            this.pnl_EffectiveStats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_EHP)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_Health
@@ -315,11 +321,51 @@
             this.lbl_Armor.TabIndex = 0;
             this.lbl_Armor.Text = "Armor";
             // 
+            // pnl_EffectiveStats
+            // 
+            this.pnl_EffectiveStats.Controls.Add(this.numUpDown_EHP);
+            this.pnl_EffectiveStats.Controls.Add(this.lbl_EHP);
+            this.pnl_EffectiveStats.Controls.Add(this.lbl_Effective);
+            this.pnl_EffectiveStats.Location = new System.Drawing.Point(424, 27);
+            this.pnl_EffectiveStats.Name = "pnl_EffectiveStats";
+            this.pnl_EffectiveStats.Size = new System.Drawing.Size(200, 269);
+            this.pnl_EffectiveStats.TabIndex = 13;
+            // 
+            // numUpDown_EHP
+            // 
+            this.numUpDown_EHP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numUpDown_EHP.Enabled = false;
+            this.numUpDown_EHP.Location = new System.Drawing.Point(3, 55);
+            this.numUpDown_EHP.Name = "numUpDown_EHP";
+            this.numUpDown_EHP.Size = new System.Drawing.Size(194, 23);
+            this.numUpDown_EHP.TabIndex = 2;
+            // 
+            // lbl_EHP
+            // 
+            this.lbl_EHP.AutoSize = true;
+            this.lbl_EHP.Location = new System.Drawing.Point(3, 37);
+            this.lbl_EHP.Name = "lbl_EHP";
+            this.lbl_EHP.Size = new System.Drawing.Size(90, 15);
+            this.lbl_EHP.TabIndex = 2;
+            this.lbl_EHP.Text = "Effective Health";
+            // 
+            // lbl_Effective
+            // 
+            this.lbl_Effective.AutoSize = true;
+            this.lbl_Effective.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_Effective.Location = new System.Drawing.Point(3, 0);
+            this.lbl_Effective.Name = "lbl_Effective";
+            this.lbl_Effective.Size = new System.Drawing.Size(105, 21);
+            this.lbl_Effective.TabIndex = 0;
+            this.lbl_Effective.Text = "Effective Stats";
+            // 
             // Warframe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 377);
+            this.Controls.Add(this.pnl_EffectiveStats);
             this.Controls.Add(this.pnl_Armor);
             this.Controls.Add(this.pnl_Health);
             this.Controls.Add(this.menuStrip1);
@@ -340,6 +386,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorBonus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_ArmorPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_BaseArmor)).EndInit();
+            this.pnl_EffectiveStats.ResumeLayout(false);
+            this.pnl_EffectiveStats.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numUpDown_EHP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,5 +421,9 @@
         private Label lbl_Armor;
         private NumericUpDown numUpDown_DamageReduction;
         private Label lbl_DamageReduction;
+        private Panel pnl_EffectiveStats;
+        private NumericUpDown numUpDown_EHP;
+        private Label lbl_EHP;
+        private Label lbl_Effective;
     }
 }
