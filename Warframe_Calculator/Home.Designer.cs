@@ -49,6 +49,7 @@
             this.btn_newWarframe.TabIndex = 0;
             this.btn_newWarframe.Text = "New Warframe";
             this.btn_newWarframe.UseVisualStyleBackColor = true;
+            this.btn_newWarframe.Click += new System.EventHandler(this.btn_newWarframe_Click);
             // 
             // btn_newPrimary
             // 

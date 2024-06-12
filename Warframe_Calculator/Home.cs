@@ -16,5 +16,16 @@ namespace Warframe_Calculator
         {
             InitializeComponent();
         }
+        
+        private void btn_newWarframe_Click(object sender, EventArgs e)
+        {
+            // Show the "new Warframe" form. 
+            using (CustomApplicationContext appContext = new CustomApplicationContext())
+            {
+                appContext.ShowWarframeForm();
+            }
+
+            this.Hide();
+        }
     }
 }
